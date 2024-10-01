@@ -1,0 +1,4 @@
+{
+    "delivery_services": "Extract the key sections of the page related to the delivery of services. Focus on the disclaimer text and policies that Northeastern University applies to the provision of educational or other services. Ensure to keep paragraphs intact and avoid splitting meaningful blocks of text. Remove unnecessary newline characters, formatting tags, and metadata. Focus on text starting from the 'Delivery of Services' heading, and exclude navigation, footer, and header information that does not pertain to the core content."
+}
+

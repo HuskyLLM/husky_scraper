@@ -1,0 +1,18 @@
+{
+  "huggingface": {
+    "repo_id": "mistralai/Mistral-7B-Instruct-v0.2",
+    "model_max_length": 128,
+    "temperature": 0.5,
+    "model_tokens": 100000
+  },
+  "scraping_tasks": {
+    "delivery_services": {
+      "url": "https://catalog.northeastern.edu/delivery-services/",
+      "output_file": "delivery_services_result.json"
+    },
+    "governing_boards_officers": {
+      "url": "https://catalog.northeastern.edu/general-information/governing-boards-officers/",
+      "output_file": "governing_boards_result.json"
+    }
+  }
+}
