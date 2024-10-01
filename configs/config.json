@@ -9,10 +9,6 @@
     "delivery_services": {
       "url": "https://catalog.northeastern.edu/delivery-services/",
       "output_file": "delivery_services_result.json"
-    },
-    "governing_boards_officers": {
-      "url": "https://catalog.northeastern.edu/general-information/governing-boards-officers/",
-      "output_file": "governing_boards_result.json"
     }
   }
 }

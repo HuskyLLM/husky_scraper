@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from scraper import initialize_model, run_smart_scraper
+from ai_scraper import initialize_model, run_smart_scraper
 from utils import load_json_file, save_results, setup_logging
 
 # Load environment variables
@@ -28,11 +28,10 @@ try:
 
     # Loop through tasks in the config file
     for task_key, task_details in config["scraping_tasks"].items():
-        url = task_details["url"]
         output_filename = task_details["output_file"]
 
         # Log task start
-        logger.info(f"Starting scraping task: {task_key} for URL: {url}")
+        logger.info(f"Starting scraping task: {task_key}")
 
         # Retrieve the prompt for the current task
         prompt = prompts.get(task_key)
@@ -40,24 +39,29 @@ try:
             logger.error(f"No prompt found for task: {task_key}, skipping this task.")
             continue
 
-        # Log that the scraper is running
-        logger.info(f"Running scraper for {task_key}...")
+        # Handle tasks with multiple URLs (like faculty_members)
+        urls = task_details.get("urls", [task_details.get("url")])
 
-        # Run the scraper
-        result = run_smart_scraper(url, prompt, llm_model_instance)
+        all_results = []  # To store combined results from multiple URLs
 
-        # If result is None, log an error and continue
-        if not result:
-            logger.error(f"Failed to get results for {task_key}, skipping saving.")
-            continue
+        # Loop through each URL and run the scraper
+        for url in urls:
+            logger.info(f"Running scraper for {task_key} - URL: {url}")
+            result = run_smart_scraper(url, prompt, llm_model_instance)
+
+            if result:
+                all_results.append(result)
+            else:
+                logger.error(f"Failed to get results for {task_key} - URL: {url}")
 
         # Save the results if successful
-        try:
-            logger.info(f"Saving results for {task_key} to {output_filename}")
-            save_results(result, f"../../results/{output_filename}", logger)
-            logger.info(f"Successfully saved results for {task_key} to {output_filename}")
-        except Exception as e:
-            logger.error(f"Failed to save results for {task_key}: {e}")
+        if all_results:
+            try:
+                logger.info(f"Saving combined results for {task_key} to {output_filename}")
+                save_results(all_results, f"../../results/{output_filename}",logger)
+                logger.info(f"Successfully saved results for {task_key} to {output_filename}")
+            except Exception as e:
+                logger.error(f"Failed to save results for {task_key}: {e}")
 
 except Exception as e:
     # Log any critical errors during the overall process
