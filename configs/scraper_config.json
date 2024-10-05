@@ -1,0 +1,46 @@
+{
+  "scraping_tasks": {
+    "course_description": {
+      "urls":
+              [
+        "https://catalog.northeastern.edu/course-descriptions/"
+              ],
+      "output_file": "../../results/northeastern_course_descriptions.json"
+    },
+    "faculty_members": {
+      "urls": [
+        "https://catalog.northeastern.edu/general-information/faculty/#a6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#b6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#c6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#d6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#e6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#f6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#g6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#h6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#i6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#j6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#k6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#l6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#m6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#n6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#o6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#p6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#q6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#r6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#s6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#t6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#u6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#v6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#w6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#x6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#y6511813",
+        "https://catalog.northeastern.edu/general-information/faculty/#z6511813"
+      ],
+      "output_file": "../../results/northeastern_faculty_members.json"
+    },
+    "accreditation": {
+      "urls": ["https://catalog.northeastern.edu/general-information/accreditation/"],
+      "output_file": "../../results/northeastern_accreditation.json"
+    }
+  }
+}

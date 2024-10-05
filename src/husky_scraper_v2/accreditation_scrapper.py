@@ -57,7 +57,7 @@ def scrape_accreditation_page(url, accreditation_data):
 
 
 # Function to scrape all accreditation details from multiple URLs
-def scrape_all_accreditation(urls):
+def scrape_all_accreditation(urls, config):
     accreditation_data = []
 
     for i, url in enumerate(urls):
@@ -65,7 +65,7 @@ def scrape_all_accreditation(urls):
         scrape_accreditation_page(url, accreditation_data)
 
     # Save the scraped data to a JSON file
-    output_file = '../../results/northeastern_accreditation_result.json'
+    output_file = f'../../results/{config["scraping_tasks"]["accreditation"]["output_file"]}.json'
     with open(output_file, 'w') as json_file:
         json.dump(accreditation_data, json_file, indent=4)
 
@@ -75,13 +75,13 @@ def scrape_all_accreditation(urls):
 # Main function to load URLs from config and run the scraper
 def run_accreditation_scraper():
     # Load the config.json file
-    config = load_json_file("../../configs/config.json", logger)
+    config = load_json_file("../../configs/scraper_config.json", logger)
 
     # Extract the URLs from the config for accreditation pages
-    accreditation_urls = ["https://catalog.northeastern.edu/general-information/accreditation/"] #config["scraping_tasks"]["accreditation"]["urls"]
+    accreditation_urls = config["scraping_tasks"]["accreditation"]["urls"]
 
     # Run the scraping process for the URLs
-    scrape_all_accreditation(accreditation_urls)
+    scrape_all_accreditation(accreditation_urls, config)
 
 
 # Run the scraper when the script is executed directly

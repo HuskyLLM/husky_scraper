@@ -36,7 +36,7 @@ def scrape_faculty_page(url, faculty_data):
 
 
 # Function to scrape all faculty from multiple URLs
-def scrape_all_faculty(urls):
+def scrape_all_faculty(urls, config):
     # Lists to store the faculty data
     faculty_data = []
 
@@ -46,7 +46,7 @@ def scrape_all_faculty(urls):
         scrape_faculty_page(url, faculty_data)
 
     # Save the faculty data to a JSON file
-    output_file = '../../results/northeastern_faculty_members.json'
+    output_file = f'../../results/{config["scraping_tasks"]["faculty_members"]["output_file"]}.json'
     with open(output_file, 'w') as json_file:
         json.dump(faculty_data, json_file, indent=4)
 
@@ -56,13 +56,13 @@ def scrape_all_faculty(urls):
 # Main function to load the URLs from the config and scrape faculty members
 def run_faculty_scraper():
     # Load the config.json file
-    config = load_json_file("../../configs/config.json",logger)
+    config = load_json_file("../../configs/scraper_config.json",logger)
 
     # Extract the URLs from the config for faculty members
     faculty_urls = config["scraping_tasks"]["faculty_members"]["urls"]
 
     # Run the scraping process for the faculty URLs
-    scrape_all_faculty(faculty_urls)
+    scrape_all_faculty(faculty_urls, config)
 
 
 # Run the function when this script is called directly

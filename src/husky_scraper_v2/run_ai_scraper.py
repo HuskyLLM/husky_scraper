@@ -19,8 +19,8 @@ try:
 
     # Load configuration and prompts using the generic load function
     logger.info("Loading config and prompts...")
-    config = load_json_file("../../configs/config.json", logger)
-    prompts = load_json_file("../../configs/prompts.json", logger)
+    config = load_json_file("../../configs/ai_scraper_config.json", logger)
+    prompts = load_json_file("../../configs/ai_prompts.json", logger)
 
     # Initialize model instances
     logger.info("Initializing model instances...")
