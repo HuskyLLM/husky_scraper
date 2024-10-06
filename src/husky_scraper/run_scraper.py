@@ -1,6 +1,8 @@
 from course_scraper import CourseScraper
 from faculty_scraper import FacultyScraper
 from accreditation_scrapper import AccreditationScraper
+from undergrad_admissions_requirements import UndergradAdmissionRequirements, UndergradMilitaryRequirements, \
+    UndergradJohnMartinsonRequirements, UndergradSpecializedEntry
 from utils import load_from_file
 from logging_util import LoggerFactory
 
@@ -17,26 +19,71 @@ def main() -> None:
     config = load_from_file('../../configs/scraper_config.json', logger)
     print(config)
     # Scrape course descriptions
-    course_task = config['scraping_tasks'].get('course_description')
+    '''course_task = config['scraping_tasks'].get('course_description')
     if course_task:
         logger.info(f"Scraping course descriptions from {course_task['urls']}")
-        course_scraper = CourseScraper(course_task['urls'], course_task['output_file'], logger)
-        course_scraper.scrape()
+        scraper = CourseScraper(course_task['urls'], course_task['output_file'], logger)
+        scraper.scrape()
 
     # Scrape faculty members
     faculty_task = config['scraping_tasks'].get('faculty_members')
     if faculty_task:
         logger.info(f"Scraping faculty members from multiple URLs")
-        faculty_scraper = FacultyScraper(faculty_task['urls'], faculty_task['output_file'], logger)
-        faculty_scraper.scrape()
+        scraper = FacultyScraper(faculty_task['urls'], faculty_task['output_file'], logger)
+        scraper.scrape()
 
     # Scrape accreditation info
     accreditation_task = config['scraping_tasks'].get('accreditation')
     if accreditation_task:
         logger.info(f"Scraping accreditation info from {accreditation_task['urls'][0]}")
-        accreditation_scraper = AccreditationScraper(accreditation_task['urls'][0], accreditation_task['output_file'],
+        scraper = AccreditationScraper(accreditation_task['urls'][0], accreditation_task['output_file'],
                                                      logger)
-        accreditation_scraper.scrape()
+        scraper.scrape()'''
+
+    # Scrape undergrad info
+    undergrad_academic_requirements = config['scraping_tasks'].get('undergrad_academic_requirements')
+    if undergrad_academic_requirements:
+        logger.info(f"Scraping Undergrad Admission info from {undergrad_academic_requirements['urls'][0]}")
+        scraper = UndergradAdmissionRequirements(undergrad_academic_requirements['urls'][0],
+                                                 undergrad_academic_requirements['output_file'],
+                                                 logger)
+        scraper.scrape()
+
+    # Scrape undergrad info
+    undergrad_conditional_admission = config['scraping_tasks'].get('undergrad_conditional_admission')
+    if undergrad_academic_requirements:
+        logger.info(f"Scraping Undergrad Admission info from {undergrad_conditional_admission['urls'][0]}")
+        scraper = UndergradAdmissionRequirements(undergrad_conditional_admission['urls'][0],
+                                                 undergrad_conditional_admission['output_file'],
+                                                 logger)
+        scraper.scrape()
+
+    # Scrape undergrad info
+    undergrad_military_admission = config['scraping_tasks'].get('undergrad_military_admission')
+    if undergrad_academic_requirements:
+        logger.info(f"Scraping Undergrad Admission info from {undergrad_military_admission['urls'][0]}")
+        scraper = UndergradMilitaryRequirements(undergrad_military_admission['urls'][0],
+                                                undergrad_military_admission['output_file'],
+                                                logger)
+        scraper.scrape()
+
+    # Scrape undergrad info
+    undergrad_john_martinson_admission = config['scraping_tasks'].get('undergrad_john_martinson_admission')
+    if undergrad_john_martinson_admission:
+        logger.info(f"Scraping Undergrad Admission info from {undergrad_john_martinson_admission['urls'][0]}")
+        scraper = UndergradJohnMartinsonRequirements(undergrad_john_martinson_admission['urls'][0],
+                                                     undergrad_john_martinson_admission['output_file'],
+                                                     logger)
+        scraper.scrape()
+
+    # Scrape undergrad info
+    specialized_entry_programs = config['scraping_tasks'].get('specialized_entry_programs')
+    if specialized_entry_programs:
+        logger.info(f"Scraping Undergrad Admission info from {specialized_entry_programs['urls'][0]}")
+        scraper = UndergradSpecializedEntry(specialized_entry_programs['urls'][0],
+                                                     specialized_entry_programs['output_file'],
+                                                     logger)
+        scraper.scrape()
 
 
 if __name__ == "__main__":
