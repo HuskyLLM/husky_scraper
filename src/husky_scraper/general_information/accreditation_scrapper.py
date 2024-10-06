@@ -1,7 +1,7 @@
 from typing import List, Any, Dict
 from bs4 import BeautifulSoup
-from base_scraper import BaseScraper
-from utils import replace_unicode
+from from src.husky_scraper.base_scraper import BaseScraper
+from src.husky_scraper.utils import replace_unicode
 
 
 class AccreditationScraper(BaseScraper):

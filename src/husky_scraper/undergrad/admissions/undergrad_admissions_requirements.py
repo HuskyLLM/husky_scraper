@@ -1,15 +1,7 @@
-import requests
-import json
-import logging
-from typing import List, Dict
 from bs4 import BeautifulSoup
-from base_scraper import BaseScraper
+from src.husky_scraper.base_scraper import BaseScraper
 import re
-from utils import fetch_html, save_to_file, replace_unicode
-
-# Set up logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger()
+from src.husky_scraper.utils import fetch_html, save_to_file, replace_unicode
 
 
 class UndergradAdmissionRequirements(BaseScraper):

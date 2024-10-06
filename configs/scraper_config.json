@@ -4,7 +4,7 @@
       "urls": [
         "https://catalog.northeastern.edu/course-descriptions/"
       ],
-      "output_file": "../../results/northeastern_course_descriptions.json"
+      "output_file": "../../results/general_information/northeastern_course_descriptions.json"
     },
     "faculty_members": {
       "urls": [
@@ -35,13 +35,13 @@
         "https://catalog.northeastern.edu/general-information/faculty/#y6511813",
         "https://catalog.northeastern.edu/general-information/faculty/#z6511813"
       ],
-      "output_file": "../../results/northeastern_faculty_members.json"
+      "output_file": "../../results/general_information/northeastern_faculty_members.json"
     },
     "accreditation": {
       "urls": [
         "https://catalog.northeastern.edu/general-information/accreditation/"
       ],
-      "output_file": "../../results/northeastern_accreditation.json"
+      "output_file": "../../results/general_information/northeastern_accreditation.json"
     },
     "major_cip_codes": {
       "url": "https://catalog.northeastern.edu/general-information/major-cip-codes/",
@@ -59,31 +59,37 @@
       "urls" : [
         "https://catalog.northeastern.edu/undergraduate/admission/admission-policy-entrance-requirements/"
       ],
-      "output_file": "../../results/undergrad/admission_policy_requirements.json"
+      "output_file": "../../results/undergrad/admissions/admission_policy_requirements.json"
     },
     "undergrad_conditional_admission": {
       "urls" : [
         "https://catalog.northeastern.edu/undergraduate/admission/conditional-admission/"
       ],
-      "output_file": "../../results/undergrad/conditional_admission.json"
+      "output_file": "../../results/undergrad/admissions/conditional_admission.json"
     },
     "undergrad_military_admission": {
       "urls" : [
         "https://catalog.northeastern.edu/undergraduate/admission/deferment-enrollment-due-to-military-deployment/"
       ],
-      "output_file": "../../results/undergrad/undergrad_military_admission.json"
+      "output_file": "../../results/undergrad/admissions/undergrad_military_admission.json"
     },
     "undergrad_john_martinson_admission": {
       "urls" : [
         "https://catalog.northeastern.edu/undergraduate/admission/university-honors/"
       ],
-      "output_file": "../../results/undergrad/john_martinson_admission.json"
+      "output_file": "../../results/undergrad/admissions/john_martinson_admission.json"
     },
     "specialized_entry_programs": {
       "urls" : [
         "https://catalog.northeastern.edu/undergraduate/admission/specialized-entry/"
       ],
-      "output_file": "../../results/undergrad/specialized_entry_programs.json"
+      "output_file": "../../results/undergrad/admissions/specialized_entry_programs.json"
+    },
+    "disability_accommodation": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/accommodations-students-with-disabilities/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/disability_accommodation.json"
     }
   }
 }

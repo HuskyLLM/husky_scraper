@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from utils import fetch_html, save_to_file
+from src.husky_scraper.utils import fetch_html, save_to_file
 
 
 class BaseScraper(ABC):

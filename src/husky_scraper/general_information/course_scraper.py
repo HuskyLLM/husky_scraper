@@ -1,8 +1,8 @@
 from typing import List, Dict
 from bs4 import BeautifulSoup
-from base_scraper import BaseScraper
+from from src.husky_scraper.base_scraper import BaseScraper
 import re
-from utils import fetch_html, save_to_file, replace_unicode
+from src.husky_scraper.utils import fetch_html, save_to_file, replace_unicode
 
 
 def clean_course_title_and_hours(title):

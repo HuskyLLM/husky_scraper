@@ -4,7 +4,7 @@ import pandas as pd
 import re
 import json
 import logging
-from utils import setup_logging
+from src.husky_scraper.utils import setup_logging
 
 # Set up logging
 logger = setup_logging('../../logs/course_scraper.log')
@@ -89,7 +89,7 @@ def scrape_all_courses():
         scrape_course_page(url, course_data)
 
     # Save the course data to a JSON file
-    output_file = '../../results/northeastern_course_descriptions.json'
+    output_file = '../../results/general_information/northeastern_course_descriptions.json'
     with open(output_file, 'w') as json_file:
         json.dump(course_data, json_file, indent=4)
 

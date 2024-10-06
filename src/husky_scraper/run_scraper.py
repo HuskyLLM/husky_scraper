@@ -1,8 +1,7 @@
-from course_scraper import CourseScraper
-from faculty_scraper import FacultyScraper
-from accreditation_scrapper import AccreditationScraper
-from undergrad_admissions_requirements import UndergradAdmissionRequirements, UndergradMilitaryRequirements, \
+from src.husky_scraper.undergrad.admissions.undergrad_admissions_requirements import UndergradAdmissionRequirements, \
+    UndergradMilitaryRequirements, \
     UndergradJohnMartinsonRequirements, UndergradSpecializedEntry
+from src.husky_scraper.undergrad.entering_students_info.accommodation_scraper import Accommodation
 from utils import load_from_file
 from logging_util import LoggerFactory
 
@@ -81,8 +80,17 @@ def main() -> None:
     if specialized_entry_programs:
         logger.info(f"Scraping Undergrad Admission info from {specialized_entry_programs['urls'][0]}")
         scraper = UndergradSpecializedEntry(specialized_entry_programs['urls'][0],
-                                                     specialized_entry_programs['output_file'],
-                                                     logger)
+                                            specialized_entry_programs['output_file'],
+                                            logger)
+        scraper.scrape()
+
+    # Scrape undergrad info
+    disability_accommodation = config['scraping_tasks'].get('disability_accommodation')
+    if disability_accommodation:
+        logger.info(f"Scraping Undergrad Admission info from {disability_accommodation['urls'][0]}")
+        scraper = Accommodation(disability_accommodation['urls'][0],
+                                disability_accommodation['output_file'],
+                                logger)
         scraper.scrape()
 
 
