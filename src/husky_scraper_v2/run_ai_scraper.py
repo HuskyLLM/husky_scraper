@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from ai_scraper import initialize_model, run_smart_scraper
-from src.husky_scraper.utils import load_json_file, save_results, setup_logging
+from src.husky_scraper_v3.utils import load_json_file, save_results, setup_logging
 
 # Load environment variables
 load_dotenv()

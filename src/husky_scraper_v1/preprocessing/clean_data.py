@@ -28,7 +28,7 @@ def clean_course_data(course):
 def clean_text(text):
     # Remove HTML tags
     soup = BeautifulSoup(text, 'lxml')
-    cleaned_text = soup.get_text(separator=' ', strip=True)
+    cleaned_text = soup.get_text(separator='.', strip=True)
     # Normalize whitespace
     cleaned_text = re.sub(r'\s+', ' ', cleaned_text)
     return cleaned_text

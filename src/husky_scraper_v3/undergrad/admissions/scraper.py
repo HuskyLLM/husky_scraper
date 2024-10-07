@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
-from src.husky_scraper.base_scraper import BaseScraper
+from src.husky_scraper_v3.base_scraper import BaseScraper
 import re
-from src.husky_scraper.utils import fetch_html, save_to_file, replace_unicode
+from src.husky_scraper_v3.utils import fetch_html, save_to_file, replace_unicode
 
 
 class UndergradAdmissionRequirements(BaseScraper):
@@ -62,7 +62,7 @@ class UndergradMilitaryRequirements(BaseScraper):
         title = soup.find('h1').text.strip()
 
         # Extract the content under the main section related to deferment
-        main_content = soup.find('div', {'id': 'textcontainer'}).get_text(separator='\n').strip()
+        main_content = soup.find('div', {'id': 'textcontainer'}).get_text(separator='.').strip()
 
         # Create a dictionary with the title as the key and main content as the value
         scraped_data = {replace_unicode(title): replace_unicode(main_content)}
@@ -96,7 +96,7 @@ class UndergradJohnMartinsonRequirements(BaseScraper):
             return {}
 
         # Extract all the text content and replace \n with space and &nbsp; with space
-        full_content = main_content_section.get_text(separator='\n', strip=True).replace('\n', ' ').replace('\xa0', ' ')
+        full_content = main_content_section.get_text(separator='.', strip=True).replace('\n', ' ').replace('\xa0', ' ')
 
         # Extract phone numbers (matching patterns like 617.373.2333 or 617-373-2333)
         phone_numbers = re.findall(r'\(?\d{3}\)?[\.\-\s]\d{3}[\.\-\s]\d{4}', full_content)
@@ -107,7 +107,7 @@ class UndergradJohnMartinsonRequirements(BaseScraper):
         # Extract names of Director and Associate Directors, replace \n with space and &nbsp;
         director_names = []
         for p_tag in main_content_section.find_all('p'):
-            text = p_tag.get_text(separator='\n').strip().replace('\n', ' ').replace('\xa0', ' ')
+            text = p_tag.get_text(separator='.').strip().replace('\n', ' ').replace('\xa0', ' ')
             if "Director" in text or "Associate Director" in text:
                 director_names.append(text)
 

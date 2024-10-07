@@ -2,7 +2,6 @@ import requests
 import json
 import sys
 import re
-import os
 
 
 def fetch_html(url: str, logging) -> str:
@@ -36,12 +35,6 @@ def save_to_file(data: dict, output_file: str, logging) -> None:
         logging: The logger instance used for logging information and errors.
     """
     try:
-        output_dir = os.path.dirname(output_file)
-        logging.info(f"hello {output_dir}")
-        if output_dir and not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-            logging.info(f"Created directory: {output_dir}")
-
         logging.info(f"Saving data to {output_file}")
         with open(output_file, 'w') as f:
             json.dump(data, f, indent=4)

@@ -4,7 +4,7 @@ import pandas as pd
 import re
 import json
 import logging
-from src.husky_scraper.utils import setup_logging
+from src.husky_scraper_v3.utils import setup_logging
 
 # Set up logging
 logger = setup_logging('../../logs/course_scraper.log')

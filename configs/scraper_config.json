@@ -90,6 +90,264 @@
         "https://catalog.northeastern.edu/undergraduate/information-entering-students/accommodations-students-with-disabilities/"
       ],
       "output_file": "../../results/undergrad/entering_students_info/disability_accommodation.json"
+    },
+    "family_programs": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/parent-family-programs/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/family_programs.json"
+    },
+    "residential_life": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/residential-life/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/residential_life.json"
+    },
+    "health_requirements_uhcs": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/health-requirements-uhcs/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/health_requirements_uhcs.json"
+    },
+    "international": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/international/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/international.json"
+    },
+    "information_technology_services": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/information-technology-services//"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/information_technology_services.json"
+    },
+    "office_of_the_registrar": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/office-of-the-registrar/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/office_of_the_registrar.json"
+    },
+    "nupd": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/nupd/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/nupd.json"
+    },
+    "student_orientation": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/student-orientation/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/student_orientation.json"
+    },
+    "we_care": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/information-entering-students/we-care/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/we_care.json"
+    },
+    "bill_payment": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/expenses/bill-payment/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/bill_payment.json"
+    },
+    "financial_aid": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/expenses/financial-aid/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/financial_aid.json"
+    },
+    "financing_options": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/expenses/financing-options/"
+      ],
+      "output_file": "../../results/undergrad/entering_students_info/financing_options.json"
+    },
+    "tuition_room_board": {
+      "urls" : [
+        "https://catalog.northeastern.edu/undergraduate/expenses/tuition-room-board-fees-per-semester/"
+      ],
+      "output_file": "../../results/undergrad/financial_information/tuition_room_board.json"
+    },
+    "academic_integrity": {
+      "urls": [
+        "https://catalog.northeastern.edu/handbook/policies-regulations/academic-integrity/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/academic_integrity.json"
+    },
+    "academic_consequences_violating_integrity": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/academic-consequences-violating-academic-integrity-policy/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/academic_consequences_violating_integrity.json"
+    },
+    "attendance_requirements": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/attendance-requirements/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/attendance_requirements.json"
+    },
+    "campus_transfer": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/campus-transfer-location-change/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/campus_transfer.json"
+    },
+    "clearing_academic_deficiency": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/clearing-academic-deficiency/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/clearing_academic_deficiency.json"
+    },
+    "student_conduct": {
+      "urls": [
+        "https://catalog.northeastern.edu/handbook/code-student-conduct/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/student_conduct.json"
+    },
+    "course_credit_guidelines": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/course-credit-guidelines/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/course_credit_guidelines.json"
+    },
+    "course_numbering": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/course-numbering/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/course_numbering.json"
+    },
+    "grade_change_policy": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/grade-change-policy/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/grade_change_policy.json"
+    },
+    "student_records_transcripts": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/student-records-transcripts-related-policies/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/student_records_transcripts.json"
+    },
+    "leaves_of_absence": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/leaves-of-absence-withdrawal/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/leaves_of_absence.json"
+    },
+    "personal_information": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/personal-information/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/personal_information.json"
+    },
+    "incomplete_grade_policy": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/incomplete-grade-policy/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/incomplete_grade_policy.json"
+    },
+    "retaking_courses": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/retaking-courses/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/retaking_courses.json"
+    },
+    "student_rights_responsibilities": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/students-bill-of-academic-rights-and-responsibilities/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/student_rights_responsibilities.json"
+    },
+    "ferpa": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/ferpa/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/ferpa.json"
+    },
+    "student_responsibility_statement": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/student-responsibility-statement/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/student_responsibility_statement.json"
+    },
+    "student_right_to_know_act": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/student-right-to-know-act/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/student_right_to_know_act.json"
+    },
+    "substituting_courses": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/substituting-courses/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/substituting_courses.json"
+    },
+    "university_sponsored_travel": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/university-sponsored-travel/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/university_sponsored_travel.json"
+    },
+    "academic_appeals": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/academic-appeals-policies-procedures/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/academic_appeals.json"
+    },
+    "honors": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/honors/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/honors.json"
+    },
+    "progression_standards": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/progression-standards/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/progression_standards.json"
+    },
+    "cooperative_education": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/cooperative-education/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/cooperative_education.json"
+    },
+    "degrees_majors_minors": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/degrees-majors-minors/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/degrees_majors_minors.json"
+    },
+    "drop_class": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/drop-class/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/drop_class.json"
+    },
+    "final_exams_policy": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/final-examinations-related-policies-final-papers-projects/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/final_exams_policy.json"
+    },
+    "graduation_requirements": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/graduation-requirements/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/graduation_requirements.json"
+    },
+    "registration_taking_courses": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/registration-taking-courses/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/registration_taking_courses.json"
+    },
+    "student_evaluation_of_courses": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/student-evaluation-of-courses-trace/"
+      ],
+      "output_file": "../../results/undergrad/academic_policies/student_evaluation_of_courses.json"
     }
   }
 }

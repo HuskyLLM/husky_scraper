@@ -1,7 +1,7 @@
 from scrapegraphai.graphs import SmartScraperGraph
 from langchain_community.llms import HuggingFaceEndpoint
 from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
-from src.husky_scraper.utils import setup_logging
+from src.husky_scraper_v3.utils import setup_logging
 
 logger = setup_logging('../../logs/scraper.log')
 

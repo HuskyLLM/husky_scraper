@@ -1,6 +1,6 @@
 from typing import List, Dict
 from bs4 import BeautifulSoup
-from src.husky_scraper.base_scraper import BaseScraper
+from from src.husky_scraper_v3.base_scraper import BaseScraper
 import re
 from src.husky_scraper_v3.utils import fetch_html, save_to_file, replace_unicode
 

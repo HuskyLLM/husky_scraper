@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import logging
-from src.husky_scraper.utils import setup_logging, load_json_file
+from src.husky_scraper_v3.utils import setup_logging, load_json_file
 
 # Set up logging
 logger = setup_logging('../../logs/accreditation_scraper.log')
