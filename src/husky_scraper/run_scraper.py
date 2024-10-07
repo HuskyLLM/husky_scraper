@@ -1,7 +1,6 @@
 from src.husky_scraper.undergrad.scraper import UndergradScraper
 from utils import load_from_file
 from logging_util import LoggerFactory
-from concurrent.futures import ThreadPoolExecutor
 from collections import defaultdict
 import traceback
 
@@ -15,7 +14,7 @@ def run_scraper(scraper_class, config_task, logger, task_name):
         return
     try:
         logger.info(f"Scraping {task_name} info from {config_task['urls'][0]}")
-        scraper = scraper_class(config_task['urls'][0], config_task['output_file'], logger)
+        scraper = scraper_class(config_task['urls'], config_task['output_file'], logger)
         scraper.scrape()
     except Exception as e:
         logger.error(f"Error occurred during scraping {task_name}: {str(e)} - {traceback.format_exc()} ")
@@ -66,27 +65,33 @@ def main() -> None:
     # List of tasks categorized by their scraper class
     scraping_batches = [
         (UndergradScraper, ['undergrad_academic_requirements', 'undergrad_conditional_admission',
-                            'undergrad_military_admission', 'undergrad_john_martinson_admission',
-                            'specialized_entry_programs', 'disability_accommodation', 'family_programs',
-                            'residential_life', 'health_requirements_uhcs',
-                            'international', 'information_technology_services', 'office_of_the_registrar', 'nupd',
-                            'student_orientation', 'we_care', 'bill_payment', 'financial_aid', 'financing_options',
-                            'tuition_room_board',
-                            'academic_integrity', 'academic_consequences_violating_integrity',
-                            'attendance_requirements',
-                            'campus_transfer', 'clearing_academic_deficiency', 'student_conduct',
-                            'course_credit_guidelines',
-                            'course_numbering', 'grade_change_policy', 'student_records_transcripts',
-                            'leaves_of_absence',
-                            'personal_information', 'incomplete_grade_policy', 'retaking_courses',
-                            'student_rights_responsibilities',
-                            'ferpa', 'student_responsibility_statement', 'student_right_to_know_act',
-                            'substituting_courses',
-                            'university_sponsored_travel', 'academic_appeals', 'honors', 'progression_standards',
-                            'cooperative_education', 'degrees_majors_minors', 'drop_class', 'final_exams_policy',
-                            'graduation_requirements','registration_taking_courses', 'student_evaluation_of_courses'
-                            ]
-         )
+                              'undergrad_military_admission', 'undergrad_john_martinson_admission',
+                              'specialized_entry_programs', 'disability_accommodation', 'family_programs',
+                              'residential_life', 'health_requirements_uhcs',
+                              'international', 'information_technology_services', 'office_of_the_registrar', 'nupd',
+                              'student_orientation', 'we_care', 'bill_payment', 'financial_aid', 'financing_options',
+                              'tuition_room_board',
+                              'academic_integrity', 'academic_consequences_violating_integrity',
+                              'attendance_requirements',
+                              'campus_transfer', 'clearing_academic_deficiency', 'student_conduct',
+                              'course_credit_guidelines',
+                              'course_numbering', 'grade_change_policy', 'student_records_transcripts',
+                              'leaves_of_absence',
+                              'personal_information', 'incomplete_grade_policy', 'retaking_courses',
+                              'student_rights_responsibilities',
+                              'ferpa', 'student_responsibility_statement', 'student_right_to_know_act',
+                              'substituting_courses',
+                              'university_sponsored_travel', 'academic_appeals', 'honors', 'progression_standards',
+                              'cooperative_education', 'degrees_majors_minors', 'drop_class', 'final_exams_policy',
+                              'graduation_requirements', 'registration_taking_courses', 'student_evaluation_of_courses',
+                              'army_air_force_navy_rotc', 'education_program', 'experiential_learning', 'nu_explore',
+                              'general_studies_program', 'global_experience', 'honors_program',
+                              'living_learning_program',
+                              'nupath', 'prelaw_preparation', 'premedical_preprofessional_health_career',
+                              'research_creative_activity', 'service_learning', 'degrees', 'undergraduate_internships',
+                              'university_wide_requirements', 'world_languages_center', 'army_air_force_navy_rotc',
+                              'education_program'
+                              ])
     ]
 
     # Process each scraper batch sequentially

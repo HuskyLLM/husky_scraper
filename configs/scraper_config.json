@@ -348,6 +348,107 @@
         "https://catalog.northeastern.edu/undergraduate/academic-policies-procedures/student-evaluation-of-courses-trace/"
       ],
       "output_file": "../../results/undergrad/academic_policies/student_evaluation_of_courses.json"
+    },
+        "army_air_force_navy_rotc": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/army-air-force-navy-reserve-officers-training-corps-rotc-programs/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/army_air_force_navy_rotc.json"
+    },
+    "education_program": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/education/"],
+      "output_file": "../../results/undergrad/university_academics/education_program.json"
+    },
+    "experiential_learning": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/experiential-learning/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/experiential_learning.json"
+    },
+    "nu_explore": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/nu-explore/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/nu_explore.json"
+    },
+    "general_studies_program": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/general-studies-program/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/general_studies_program.json"
+    },
+    "global_experience": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/global-experience/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/global_experience.json"
+    },
+    "honors_program": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/honors-program/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/honors_program.json"
+    },
+    "living_learning_program": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/living-learning/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/living_learning_program.json"
+    },
+    "nupath": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/nupath/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/nupath.json"
+    },
+    "prelaw_preparation": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/prelaw-preparation/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/prelaw_preparation.json"
+    },
+    "premedical_preprofessional_health_career": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/premedical-preprofessional-health-career-preparation/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/premedical_preprofessional_health_career.json"
+    },
+    "research_creative_activity": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/research-creative-activity/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/research_creative_activity.json"
+    },
+    "service_learning": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/service-learning/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/service_learning.json"
+    },
+    "degrees": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/degrees/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/degrees.json"
+    },
+    "undergraduate_internships": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/undergraduate-internships/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/undergraduate_internships.json"
+    },
+    "university_wide_requirements": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/university-wide-requirements/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/university_wide_requirements.json"
+    },
+    "world_languages_center": {
+      "urls": [
+        "https://catalog.northeastern.edu/undergraduate/university-academics/world-languages-center/"
+      ],
+      "output_file": "../../results/undergrad/university_academics/world_languages_center.json"
     }
   }
 }

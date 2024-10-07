@@ -37,7 +37,6 @@ def save_to_file(data: dict, output_file: str, logging) -> None:
     """
     try:
         output_dir = os.path.dirname(output_file)
-        logging.info(f"hello {output_dir}")
         if output_dir and not os.path.exists(output_dir):
             os.makedirs(output_dir)
             logging.info(f"Created directory: {output_dir}")

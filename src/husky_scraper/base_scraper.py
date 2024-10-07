@@ -7,7 +7,7 @@ class BaseScraper(ABC):
     Abstract base class for all scrapers. Defines the structure for scrapers to follow.
     """
 
-    def __init__(self, url: str, output_file: str, logger) -> None:
+    def __init__(self, urls: str, output_file: str, logger) -> None:
         """
         Initializes the scraper.
 
@@ -16,7 +16,7 @@ class BaseScraper(ABC):
             output_file (str): The file to save the scraped content to.
             logger: The logger instance for logging.
         """
-        self.url = url
+        self.urls = urls
         self.output_file = output_file
         self.logger = logger
 
@@ -35,14 +35,15 @@ class BaseScraper(ABC):
 
     def scrape(self) -> None:
         """
-        Fetches the HTML content, parses it using the `parse` method,
-        and saves the parsed content to the specified output file.
+        Scrapes faculty members from multiple URLs and saves the data.
         """
-        self.logger.info(f"Starting scraping for URL: {self.url}")
-        html = fetch_html(self.url, self.logger)
-        if html:
-            parsed_content = self.parse(html)
-            save_to_file(parsed_content, self.output_file, self.logger)
-            self.logger.info(f"Scraping successful. Data saved to {self.output_file}")
-        else:
-            self.logger.error(f"Failed to fetch content from {self.url}")
+        all_data = []
+        for url in self.urls:
+            self.logger.info(f"Scraping faculty members from {url}")
+            html = fetch_html(url, self.logger)
+            if html:
+                all_data.append(self.parse(html))
+                save_to_file(all_data, self.output_file, self.logger)
+                self.logger.info(f"All data saved to {self.output_file}")
+            else:
+                self.logger.error(f"Failed to fetch content from {self.url}")
