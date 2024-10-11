@@ -1,11 +1,13 @@
 import os
 from dotenv import load_dotenv
 from ai_scraper import initialize_model, run_smart_scraper
-from src.husky_scraper_v3.utils import load_json_file, save_results, setup_logging
+from utils import load_json_file, save_results, setup_logging
 
 # Load environment variables
 load_dotenv()
-HUGGINGFACEHUB_API_TOKEN = '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' #os.getenv('HUGGINGFACEHUB_API_TOKEN')
+HUGGINGFACEHUB_API_TOKEN = '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' #os.getenv('HUGGINGFACEHUB_API_TOKEN')
+
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = HUGGINGFACEHUB_API_TOKEN
 
 if not HUGGINGFACEHUB_API_TOKEN:
     raise ValueError("Hugging Face API token not found in .env file")

@@ -21,7 +21,7 @@ class BaseScraper(ABC):
         self.logger = logger
 
     @abstractmethod
-    def parse(self, html: str):
+    def parse(self, html: str, url: str):
         """
         Abstract method to parse the HTML content. Must be implemented by subclasses.
 
@@ -30,6 +30,8 @@ class BaseScraper(ABC):
 
         Returns:
             The parsed content.
+            :param html:
+            :param url:
         """
         pass
 
@@ -42,8 +44,8 @@ class BaseScraper(ABC):
             self.logger.info(f"Scraping faculty members from {url}")
             html = fetch_html(url, self.logger)
             if html:
-                all_data.append(self.parse(html))
+                all_data.append(self.parse(html, url))
                 save_to_file(all_data, self.output_file, self.logger)
                 self.logger.info(f"All data saved to {self.output_file}")
             else:
-                self.logger.error(f"Failed to fetch content from {self.url}")
+                self.logger.error(f"Failed to fetch content from {url}")
