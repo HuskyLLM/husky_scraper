@@ -2,6 +2,8 @@ from src.husky_scraper.undergrad.scraper import UndergradScraper
 from src.husky_scraper.general_information.accreditation_scrapper import AccreditationScraper
 from src.husky_scraper.general_information.course_scraper import CourseScraper
 from src.husky_scraper.general_information.faculty_scraper import FacultyScraper
+from src.husky_scraper.general_information.major_cip_codes import MajorCIPScraper
+
 from utils import load_from_file
 from logging_util import LoggerFactory
 from collections import defaultdict
@@ -67,11 +69,8 @@ def main() -> None:
 
     # List of tasks categorized by their scraper class
     scraping_batches = [
-        (AccreditationScraper, ['accreditation']),
-        (CourseScraper, ['course_description']),
-        (FacultyScraper, ['faculty_members']),
         (UndergradScraper,
-         ['major_cip_codes', 'notifications_disclosures',
+         ['notifications_disclosures',
           'authorizations', 'undergrad_academic_requirements', 'undergrad_conditional_admission',
           'undergrad_military_admission', 'undergrad_john_martinson_admission', 'specialized_entry_programs',
           'disability_accommodation', 'family_programs', 'residential_life', 'health_requirements_uhcs',

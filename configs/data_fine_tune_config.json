@@ -1,0 +1,9 @@
+{
+      "input_directory": "../../results/raw/undergrad/financial_information",
+      "api_key": "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",
+      "model": "gpt-4-turbo",
+      "temperature": 0,
+      "max_tokens": 1500,
+      "stop": null,
+      "output_directory": "../../results/refined/"
+}

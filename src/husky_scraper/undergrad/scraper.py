@@ -27,7 +27,7 @@ class UndergradScraper(BaseScraper):
             "Navy ROTC Program": ['navyrotcprogramtextcontainer'],
             "Air Force ROTC Program": ['airforcerotcprogramtextcontainer'],
             "Overview": ['textcontainer','overviewtextcontainer'],
-            "Courses": ['coursestextcontainer'],
+            # "Courses": ['coursestextcontainer'],
             "Chair Persons": ["chairstextcontainer"],
             "Programs": ['programrequirementstextcontainer','programstextcontainer'],
             "Minor Requirements": ['newitemtextcontainer','minorrequirementstextcontainer'],
